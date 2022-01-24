@@ -1,5 +1,30 @@
 # NgVideoGameDb
 
+
+Angular project that use RapidApi to create a videogame database. 
+Created using directive like ngFor, ngIf, routing, interceptors and fundamental of the framework
+
+![image](https://user-images.githubusercontent.com/48733708/150856148-01612720-4019-4c2b-9fa0-c7c04e2e23ca.png)
+
+
+You can see a detailed page with the metacritic score, description and screenshots of the game
+
+![image](https://user-images.githubusercontent.com/48733708/150855901-77ca4a00-c577-4225-9481-fc8d8ad31ab0.png)
+
+
+The website includes a sort menu and a search bar in order to look for your favorite game!
+
+
+
+
+All the merits thanks to Slobodan Gajic. Check out his channel: https://www.youtube.com/channel/UCBu5ulO4d-d47lAVybpRTkw 
+
+
+
+
+
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.2.
 
 ## Development server
