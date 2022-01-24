@@ -9,33 +9,37 @@
     <div class="game-content">
       <div class="details-wrapper">
         <div class="game-header">
-          <h1 class="game-header-title">Game Name</h1>
+          <h1 class="game-header-title">{{ game.name }}</h1>
           <h2 class="game-header-release-date">
-            Release: 11515
+            Release: {{ game.released | date }}
           </h2>
           <p class="game-header-genres">
-            <span>RPG</span>
-         </p>         
-        </div>
-        <div class="game-gauge">
+            <span *ngFor="let genre of game.genres; let last = last"
+            >{{ genre.name }}<span *ngIf="!last">, </span></span
+          >
+          </p>
+          <div class="game-gauge">
             <mwl-gauge
-                class="two"
-                [max]="100"
-                [dialStartAngle]="180"
-                [dialEndAngle]="0"
-                [value]="gameRating"
-                [color]="getColor"
-                [animationDuration]="2"
+              class="two"
+              [max]="100"
+              [dialStartAngle]="180"
+              [dialEndAngle]="0"
+              [value]="gameRating"
+              [animated]="true"
+              [color]="getColor"
+              [animationDuration]="2"
             >
-            </mwl-gauge>  
+            </mwl-gauge>
             <a
-                class="game-gauge-label"
-                target="_blank"
-                href=""
-            >Metacritic</a>     
+              class="game-gauge-label"
+              target="_blank"
+              href="{{ game.metacritic_url }}"
+              >Metacritic</a
+            >
+          </div>
         </div>
+        
       </div>
-      <!--Aquí van las pestañas-->
     </div>
   </div>
   
